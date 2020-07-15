@@ -74,7 +74,7 @@ module DiscourseChat
             user: display_name,
             post_url: post.full_url,
             title: CGI::escapeHTML(topic.title),
-            post_excerpt: post.excerpt(SiteSetting.chat_integration_telegram_excerpt_length, text_entities: true, strip_links: true, remap_emoji: true),
+            post_excerpt: post.excerpt(SiteSetting.chat_integration_telegram_excerpt_length, strip_links: true, remap_emoji: true),
           )
 
       end
